@@ -349,7 +349,7 @@ class Mario
                             tile.typex = -3
                         }
                     }
-                    else if (tile.typex == 4 && flag.active == true) // if we are touching the end and we have the flag, restart the level
+                    else if (tile.typex == 4) // if we are touching the end, go to the win screen
                     {
                         if (this.x + 40 > tile.x * 64 + CAM_X && this.x < tile.x * 64 + CAM_X + 64 && this.y + 40 > tile.y * 64 + CAM_Y && this.y < tile.y * 64 + CAM_Y + 64 && tile.typex != -1)
                         {
