@@ -414,37 +414,7 @@ class Mario
     }
 }
 
-class MobileController
-{
-    constructor(x, y, width, height, type)
-    {
-        this.x = x
-        this.y = y
-        this.width = width
-        this.height = height
-        this.type = type
-        this.trueColor = "darkgray"
-        this.color = this.trueColor
-    }
-    draw()
-    {
-        c.fillStyle = this.color
-        c.fillRect(this.x, this.y, this.width, this.height)
-    }
-    update(touches)
-    {
-        if (touches)
-        {
-            this.color = "darkgray"
-            var x = touches[0].pageX + canvas.offsetLeft
-            var y = touches[0].pageY + canvas.offsetTop
-            if (x >= this.x && x <= this.x + this.width && y >= this.y && y <= this.y + this.width)
-            {
-                this.color = "gray" 
-            }
-        }
-    }
-}
+
 
 
 function PlayFromLocation()
@@ -724,8 +694,3 @@ addEventListener('mouseup', ()=>
 {
     mousedown = false;
 })
-
-document.ontouchmove = function(e)
-{
-    touches = e.touches
-}
