@@ -571,6 +571,9 @@ function animate(now)
             c.font = ("60px Arcade Normal")
             var textWidth = c.measureText("Don't Look Down!").width
             c.fillText("Don't Look Down!", canvas.width / 2 - textWidth / 2, 100)
+
+            leftButton.update(touches)
+            leftButton.draw()
         }
         else if (menu == 1)
         {
