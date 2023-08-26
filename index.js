@@ -438,7 +438,6 @@ b = new Background()
 mario = new Mario()
 var flag = new Flag()
 
-leftButton = new MobileController(80, 400, 150, 150, 1)
 
 buttons = [new Button(canvas.width / 2 - 125, 400, 250, 150, "Play", 'cornsilk', true, 1)]
 
@@ -542,8 +541,6 @@ function animate(now)
             var textWidth = c.measureText("Don't Look Down!").width
             c.fillText("Don't Look Down!", canvas.width / 2 - textWidth / 2, 100)
 
-            leftButton.update(touches)
-            leftButton.draw()
         }
         else if (menu == 1)
         {
@@ -568,8 +565,6 @@ function animate(now)
             time += 1 / 60
             time = Math.round(time * 100) / 100
 
-            leftButton.update(touches)
-            leftButton.draw()
         }
         else if (menu == 2)
         {
